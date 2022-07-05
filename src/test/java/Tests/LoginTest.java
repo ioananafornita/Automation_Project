@@ -1,14 +1,7 @@
 package Tests;
 
 import Base.BaseTest;
-import HelpMethods.ElementMethods;
-import HelpMethods.PageMethods;
-import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pages.IndexPage;
 import pages.LoginPage;
 
@@ -22,7 +15,7 @@ public class LoginTest extends BaseTest {
     public void metodaLogin(){
 
 
-        IndexPage indexPage = new IndexPage(Driver);
+        IndexPage indexPage = new IndexPage(getDriver());
         indexPage.clickSignIn();
 
         //Setam driverul de chrome
@@ -44,7 +37,7 @@ public class LoginTest extends BaseTest {
 
         //Validam pagina de login
 
-        LoginPage loginPage = new LoginPage(Driver);
+        LoginPage loginPage = new LoginPage(getDriver());
         loginPage.loginInvalidProcess("SignIn","email@proba.com","Proba123#","Invalid User Name or PassWord");
 
     }

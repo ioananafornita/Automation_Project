@@ -17,7 +17,9 @@ public class BaseTest {
         Driver.manage().window().maximize();
 
     }
-
+    public WebDriver getDriver() {
+        return Driver;
+    }
 
     /*@After
     public void cleaner(){
